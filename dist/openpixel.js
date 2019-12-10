@@ -12,9 +12,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 var Config = {
   id: '',
-  version: versionNumber // check if a variable is not undefined, null, or blank
-
-};
+  version: versionNumber
+}; // check if a variable is not undefined, null, or blank
 
 var isset = function isset(variable) {
   return typeof variable !== 'undefined' && variable !== null && variable !== '';
@@ -108,7 +107,7 @@ var Cookie = {
 
     return;
   },
-  delete: function _delete(name) {
+  "delete": function _delete(name) {
     this.set(name, "", -100);
   },
   exists: function exists(name) {
@@ -281,7 +280,7 @@ function () {
         utm_content: function utm_content(key) {
           return Cookie.getUtm(key);
         },
-        // get the utm concent
+        // get the utm content
         utm_campaign: function utm_campaign(key) {
           return Cookie.getUtm(key);
         } // get the utm campaign
@@ -380,4 +379,4 @@ window.onload = function () {
     }.bind(aTags[i]));
   }
 };
-}(window, document, window["opix"], "opix", "https://tracker.example.com/pixel.gif", 1));
+}(window, document, window["opix"], "opix", "http://tracker.test/collect", 1));

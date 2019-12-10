@@ -1,8 +1,36 @@
 # Openpixel
-<a href="https://www.npmjs.com/package/openpixel"><img src="https://img.shields.io/npm/v/openpixel.svg" /></a>
-<a href="https://www.npmjs.com/package/openpixel"><img src="https://img.shields.io/npm/dt/openpixel.svg" /></a>
 
-[![Powered by Dockwa](https://raw.githubusercontent.com/dockwa/openpixel/dockwa/by-dockwa.png)](https://engineering.dockwa.com/)
+> Openpixel is a customizable library for building web tracking pixels.
+
+## Prerequisite
+
+Add the following entries to your hosts file:
+
+```
+127.0.0.1       website.test
+127.0.0.1       static.test
+127.0.0.1       tracking.test
+```
+
+## Quickstart
+
+Install dependencies.
+
+```
+$ npm install
+```
+
+Copy or rename the `.env.example` file to `.env`.
+
+```
+$ cp .env.example .env 
+```
+
+Start server.
+
+```
+$ npm start
+```
 
 ## About
 Openpixel is a customizable JavaScript library for building tracking pixels. Openpixel uses the latest technologies available with fall back support for older browsers. For example is the browser supports web beacons, openpixel will send a web beacon, if it doesn't support them it will inject a 1x1 gif into the page with tracking information as part of the images get request.
@@ -92,3 +120,7 @@ https://tracker.example.com/pixel.gif?id=R29X8&uid=1-ovbam3yz-iolwx617&ev=pagelo
 | utm_term     |                     | Campaign Term                                                   |
 | utm_content  |                     | Campaign Content                                                |
 | utm_campaign |                     | Campaign Name                                                   |
+
+---
+
+[![Powered by Dockwa](https://raw.githubusercontent.com/dockwa/openpixel/dockwa/by-dockwa.png)](https://engineering.dockwa.com/)
